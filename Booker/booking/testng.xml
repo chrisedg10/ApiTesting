@@ -4,9 +4,20 @@
 <suite name="Suite">
   
   <test thread-count="1" name="Test001">
-    <parameter name="bookingid" value="10445" />
+    <parameter name="firstname" value="Bella" />
+    <parameter name="lastname" value="Rodriguez" />
+    <parameter name="totalprice" value="7550" />
+    <parameter name="checkin" value="2023-05-20" />
+    <parameter name="checkout" value="2023-05-21" />
+    <parameter name="additionalneeds" value="Presidential Suite" />
     <classes>
-      <class name="ravn.ApiTest" />
+      <class name="ravn.PostBooking" />
+    </classes>
+  </test>  <!-- Test -->
+
+  <test thread-count="1" name="Test002">
+    <classes>
+      <class name="ravn.GetBooking" />
     </classes>
   </test>  <!-- Test -->
 
