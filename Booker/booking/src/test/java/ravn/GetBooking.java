@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class GetBooking {
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void getBooking() throws IOException{
         String path = "src" + File.separator + "data"  + File.separator + "bookingIds.txt";
 

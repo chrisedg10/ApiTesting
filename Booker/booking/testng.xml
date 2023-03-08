@@ -10,14 +10,13 @@
     <parameter name="checkin" value="2023-05-20" />
     <parameter name="checkout" value="2023-05-21" />
     <parameter name="additionalneeds" value="Presidential Suite" />
+    <parameter name="newneeds" value="Whole facility to enjoy" />
     <classes>
       <class name="ravn.PostBooking" />
-    </classes>
-  </test>  <!-- Test -->
-
-  <test thread-count="1" name="Test002">
-    <classes>
       <class name="ravn.GetBooking" />
+      <class name="ravn.ValidateResponse" />
+      <class name="ravn.UpdateBooking" />
+      <class name="ravn.ValidateUpdate" />
     </classes>
   </test>  <!-- Test -->
 
