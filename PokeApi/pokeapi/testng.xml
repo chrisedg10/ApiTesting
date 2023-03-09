@@ -5,14 +5,8 @@
   
   <test thread-count="1" name="Test001">
     <parameter name="firstname" value="Bella" />
-    <parameter name="lastname" value="Rodriguez" />
-    <parameter name="totalprice" value="7550" />
-    <parameter name="checkin" value="2023-05-20" />
-    <parameter name="checkout" value="2023-05-21" />
-    <parameter name="additionalneeds" value="Presidential Suite" />
-    <parameter name="newneeds" value="Whole facility to enjoy" />
     <classes>
-      <class name="ravn.AppTest" />
+      <class name="ravn.GetResponse" />
     </classes>
   </test>  <!-- Test -->
 
