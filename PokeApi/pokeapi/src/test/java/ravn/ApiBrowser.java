@@ -2,6 +2,9 @@ package ravn;
 
 import static org.junit.Assert.fail;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.testng.annotations.*;
 
 import ravn.Constants.WebDriverBase;
@@ -19,11 +22,19 @@ public class ApiBrowser extends WebDriverBase implements PokeApiFunctions{
 
     @Parameters({ "pokemonType" })
     @Test(priority = 0)
-    public void testApi(String pokemonType){
+    public void testApi(String pokemonType) throws IOException{
         enterApi(driver, pokemonType);
         submitApi(driver);
-        //displayJson(driver);
-        displayRaw(driver);
+        displayJson(driver);
+    }
+
+    @Test
+    public void validateJson() throws IOException{
+        String pathBrowser = "src" + File.separator + "test" + File.separator + "java" + File.separator + "ravn" + File.separator + "JsonOutput" + File.separator + "request.json";
+        File file = new File(pathBrowser);
+
+        System.out.println(file.toString());
+
         System.out.println("\n***Execution Finished***\n");
     }
 

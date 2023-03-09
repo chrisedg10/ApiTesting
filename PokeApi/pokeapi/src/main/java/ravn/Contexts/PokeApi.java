@@ -40,4 +40,9 @@ public class PokeApi {
         WebElement code = driver.findElement(By.cssSelector("code"));
         return code;
     }
+
+    public WebElement JSONcode(){
+        WebElement code = driver.findElement(By.cssSelector("body>pre"));
+        return code;
+    }
 }
