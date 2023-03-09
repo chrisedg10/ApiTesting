@@ -29,6 +29,5 @@ public class JsonSchemaValidate {
             asPrettyString()
         );
 
-        System.out.println("path");
     }
 }
