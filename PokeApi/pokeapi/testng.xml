@@ -6,7 +6,7 @@
   <test thread-count="1" name="Test001">
     <parameter name="firstname" value="Bella" />
     <classes>
-      <class name="ravn.GetResponse" />
+      <class name="ravn.JsonSchemaValidate" />
     </classes>
   </test>  <!-- Test -->
 
