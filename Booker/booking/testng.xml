@@ -13,10 +13,10 @@
     <parameter name="newneeds" value="Whole facility to enjoy" />
     <classes>
       <class name="ravn.PostBooking" />
-      <!--class name="ravn.GetBooking" />
-      <class name="ravn.ValidateResponse" /-->
+      <class name="ravn.GetBooking" />
+      <class name="ravn.ValidateResponse" />
       <class name="ravn.UpdateBooking" />
-      <!--class name="ravn.ValidateUpdate" /-->
+      <class name="ravn.ValidateUpdate" />
     </classes>
   </test>  <!-- Test -->
 
