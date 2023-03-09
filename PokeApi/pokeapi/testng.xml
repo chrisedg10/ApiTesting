@@ -4,9 +4,17 @@
 <suite name="Suite">
   
   <test thread-count="1" name="Test001">
-    <parameter name="firstname" value="Bella" />
     <classes>
       <class name="ravn.JsonSchemaValidate" />
+    </classes>
+  </test>  <!-- Test -->
+
+  <test thread-count="1" name="Test002">
+    <parameter name="browser" value="Chrome" />
+    <parameter name="URL" value="https://pokeapi.co/" />
+    <parameter name="pokemonType" value="berry" />
+    <classes>
+      <class name="ravn.ApiBrowser" />
     </classes>
   </test>  <!-- Test -->
 
