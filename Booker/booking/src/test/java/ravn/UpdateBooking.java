@@ -24,15 +24,9 @@ public class UpdateBooking {
         bufferedReader.close();
         fileReader.close();
 
-        String body = "{\n"+
-            "\"firstname\":\""+firstname+"\",\n"+
-            "\"lastname\":\""+lastname+"\",\n"+
-            "\"totalprice\":\""+totalprice+"\",\n"+
-            "\"depositpaid\":true,\n"+
-            "\"bookingdates\":{\n"+
-                "\"checkin\":\""+checkin+"\",\n"+
-                "\"checkout\":\""+checkout+"\"},\n"+
-            "\"additionalneeds\":\""+newneeds+"\"}\n";
+        /* Declaring Serialized JSON Object */
+        Bookingdates bookingdates = new Bookingdates(checkin, checkout);
+        Booking booking = new Booking(firstname, lastname, totalprice, true, bookingdates, newneeds);
 
         RestAssured.baseURI = "https://restful-booker.herokuapp.com";
         RequestSpecification httpRequest = RestAssured.given();
@@ -41,7 +35,7 @@ public class UpdateBooking {
                    .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
                    .header("Cookie", "token=abc123");
 
-        Response response = httpRequest.body(body).put("/booking/" + bookingid);
+        Response response = httpRequest.body(booking).put("/booking/" + bookingid);
 
         System.out.println("\n*** PUT AUTOMATION ***\n");
         String responseBody = response.getBody().asPrettyString();
