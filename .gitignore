@@ -28,3 +28,4 @@ target/
 #Other files
 *.txt
 *.json
+*.DS_Store
